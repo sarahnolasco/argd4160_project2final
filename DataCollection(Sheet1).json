@@ -1,0 +1,188 @@
+[
+  {
+    "Movies": "The Game Plan",
+    "Genre": "Comedy, Sports",
+    "Release Year": 2007,
+    "Director": "Andy Fickman"
+  },
+  {
+    "Movies": "The Fox and the Hound",
+    "Genre": "Drama, Action, Adventure",
+    "Release Year": 1981,
+    "Director": " Ted Berman, Richard Rich, and Art Stevens"
+  },
+  {
+    "Movies": "10 Things I hate about you",
+    "Genre": "Coming of Age, Romance,Comedy",
+    "Release Year": 1999,
+    "Director": "Gil Junger"
+  },
+  {
+    "Movies": "Star Wars: The Phantom Menace",
+    "Genre": "Action, Adventure, Science Fiction",
+    "Release Year": 1999,
+    "Director": "George Lucas"
+  },
+  {
+    "Movies": "Star Wars: Attack of the Clones",
+    "Genre": "Action, Adventure, Science Fiction",
+    "Release Year": 2002,
+    "Director": "George Lucas"
+  },
+  {
+    "Movies": "Star Wars: Revenge of the Sith",
+    "Genre": "Action, Adventure, Science Fiction",
+    "Release Year": 2005,
+    "Director": "George Lucas"
+  },
+  {
+    "Movies": "Star Wars: A New Hope",
+    "Genre": "Action, Adventure, Science Fiction",
+    "Release Year": 1977,
+    "Director": "George Lucas"
+  },
+  {
+    "Movies": "Star Wars: The Empire Strikes Back",
+    "Genre": "Action, Adventure, Science Fiction",
+    "Release Year": 1980,
+    "Director": "Irvin Kershner"
+  },
+  {
+    "Movies": "Star Wars: Return of the Jedi",
+    "Genre": "Action, Adventure, Science Fiction",
+    "Release Year": 1983,
+    "Director": "Richard Marquand"
+  },
+  {
+    "Movies": "The Mandalorian and Grogu",
+    "Genre": "Action, Adventure, Science Fiction",
+    "Release Year": 2026,
+    "Director": "Jon Favreau"
+  },
+  {
+    "Movies": "The Parent Trap",
+    "Genre": "Comedy, Romance",
+    "Release Year": 1998,
+    "Director": " Nancy Meyers"
+  },
+  {
+    "Movies": "13 Going on 30",
+    "Genre": "Comedy, Romance",
+    "Release Year": 2004,
+    "Director": "Gary Winick"
+  },
+  {
+    "Movies": "50 First Dates",
+    "Genre": "Comedy, Romance",
+    "Release Year": 2004,
+    "Director": " Peter Segal"
+  },
+  {
+    "Movies": "Just Go With It",
+    "Genre": "Comedy, Romance",
+    "Release Year": 2011,
+    "Director": " Dennis Dugan"
+  },
+  {
+    "Movies": "Blended",
+    "Genre": "Comedy, Romance",
+    "Release Year": 2014,
+    "Director": "Frank Coraci"
+  },
+  {
+    "Movies": "My Big Fat Greek Wedding",
+    "Genre": "Comedy, Romance",
+    "Release Year": 2002,
+    "Director": " Joel Zwick"
+  },
+  {
+    "Movies": "Hotel Transylvania",
+    "Genre": "Family, Comedy",
+    "Release Year": 2012,
+    "Director": "Genndy Tartakovsky"
+  },
+  {
+    "Movies": "Edward Scissorhands",
+    "Genre": "Fantasy, Romance",
+    "Release Year": 1990,
+    "Director": "Tim Burton"
+  },
+  {
+    "Movies": "Corpse Bride",
+    "Genre": "Family, Fantasy",
+    "Release Year": 2005,
+    "Director": "Tim Burton and Mike Johnson"
+  },
+  {
+    "Movies": "BeetleJuice",
+    "Genre": "Horror, Fantasy",
+    "Release Year": 1988,
+    "Director": "Tim Burton"
+  },
+  {
+    "Movies": "Holiday in Handcuffs",
+    "Genre": "Comedy, Romance",
+    "Release Year": 2007,
+    "Director": "Ron Underwood"
+  },
+  {
+    "Movies": "Project Hail Mary",
+    "Genre": "Science Fiction, Adventure",
+    "Release Year": 2026,
+    "Director": "Phil Lord and Christopher Miller"
+  },
+  {
+    "Movies": "Divergent",
+    "Genre": "Action, Science Fiction",
+    "Release Year": 2014,
+    "Director": "Neil Burger"
+  },
+  {
+    "Movies": "Insurgent",
+    "Genre": "Action, Science Fiction",
+    "Release Year": 2015,
+    "Director": "Robert Schwentke"
+  },
+  {
+    "Movies": "Allegiant",
+    "Genre": "Action, Science Fiction",
+    "Release Year": 2016,
+    "Director": "Robert Schwentke"
+  },
+  {
+    "Movies": "The Maze Runner",
+    "Genre": "Science Fiction, Action",
+    "Release Year": 2014,
+    "Director": "Wes Ball"
+  },
+  {
+    "Movies": "The Maze Runner: The Scorch Trials",
+    "Genre": "Science Fiction, Action",
+    "Release Year": 2015,
+    "Director": "Wes Ball"
+  },
+  {
+    "Movies": "The Maze Runner: The Death Cure",
+    "Genre": "Science Fiction, Action",
+    "Release Year": 2018,
+    "Director": "Wes Ball"
+  },
+  {
+    "Movies": "Ratatouille",
+    "Genre": "Family, Comedy",
+    "Release Year": 2007,
+    "Director": "Brad Bird"
+  },
+  {
+    "Movies": "Are We There Yet?",
+    "Genre": "Family, Comedy",
+    "Release Year": 2005,
+    "Director": "Brian Levant"
+  },
+  {
+    "Movies": "Are We Done Yet?",
+    "Genre": "Family, Comedy",
+    "Release Year": 2007,
+    "Director": "Steve Carr"
+  }
+]
