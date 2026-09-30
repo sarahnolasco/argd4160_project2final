@@ -162,8 +162,10 @@ function getImageName(title) {
             "AreWeThereYet.jpg",
 
         "Are We Done Yet?":
-            "AreWeDoneYet.jpg"
+            "AreWeDoneYet.jpg",
 
+        "Wall-E":
+            "Wall-E.jpeg"
     };
 
     return imageNames[title];
