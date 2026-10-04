@@ -172,34 +172,17 @@ function getImageName(title) {
     return imageNames[title];
 }
 
+// current filters
+let currentGenre = "all";
+let currentDecade = "all";
+
 // genre filtering
 function createGenreFilter(genre) {
     document
         .querySelector(`[data-genre="${genre}"]`)
         .addEventListener("click", function() {
-            let moviesSection =
-                document.querySelector("#movies");
-            moviesSection.innerHTML = "";
-            let filteredMovies = [];
-            for (let i = 0; i < movies.length; i++) {
-                let movie = movies[i];
-                let genres =
-                movie.Genre
-                .toLowerCase()
-                .split(",")
-                .map(genre => genre.trim());
-             if (
-                genres.includes(genre) ||
-                genre === "all"
-            ) {
-                filteredMovies.push(movie);
-                makeMovie(movie);
-            }
-        }
-            let filters =
-                document.querySelectorAll(".genreFilter");
-            styleFilters(filters, genre);
-            updateMovieCount(filteredMovies.length);
+            currentGenre = genre;
+            showFilteredMovies();
         });
 }
 
@@ -208,29 +191,61 @@ function createDecadeFilter(decade) {
     document
         .querySelector(`[data-decade="${decade}"]`)
         .addEventListener("click", function() {
-            let moviesSection =
-                document.querySelector("#movies");
-            moviesSection.innerHTML = "";
-            let filteredMovies = [];
-            for (let i = 0; i < movies.length; i++) {
-                let movie = movies[i];
-                let year =
-                    movie["Release Year"];
-                if (
-                    decade === "all" ||
-                    (year >= Number(decade) &&
-                    year < Number(decade) + 10)
-                ) {
-                    filteredMovies.push(movie);
-                    makeMovie(movie);
-                }
-            }
-            let filters =
-                document.querySelectorAll(".decadeFilter");
-            styleDecadeFilters(filters, decade);
-            updateMovieCount(filteredMovies.length);
+            currentDecade = decade;
+            showFilteredMovies();
         });
+}
 
+// filter movies by genre AND decade
+function showFilteredMovies() {
+    let moviesSection =
+        document.querySelector("#movies");
+
+    moviesSection.innerHTML = "";
+    let filteredMovies = [];
+    for (let i = 0; i < movies.length; i++) {
+        let movie = movies[i];
+        let genres =
+            movie.Genre
+                .toLowerCase()
+                .split(",")
+                .map(genre => genre.trim());
+        let year =
+            Number(movie["Release Year"]);
+        let genreMatches =
+            currentGenre === "all" ||
+            genres.includes(currentGenre);
+        let decadeMatches =
+            currentDecade === "all" ||
+            (year >= Number(currentDecade) &&
+            year < Number(currentDecade) + 10);
+        if (genreMatches && decadeMatches) {
+            filteredMovies.push(movie);
+            makeMovie(movie);
+        }
+    }
+
+    // update selected filters
+    styleFilters(
+        document.querySelectorAll(".genreFilter"),
+        currentGenre
+    );
+    styleDecadeFilters(
+        document.querySelectorAll(".decadeFilter"),
+        currentDecade
+    );
+
+    // update movie count
+    updateMovieCount(filteredMovies.length);
+
+    // show message if there are no results
+    if (filteredMovies.length === 0) {
+        moviesSection.innerHTML = `
+            <p class="no-results">
+                no movies found
+            </p>
+        `;
+    }
 }
 
 // selected filter styling

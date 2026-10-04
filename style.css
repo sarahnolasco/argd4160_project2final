@@ -179,8 +179,10 @@ main {
     grid-column: 1 / -1;
     padding: 70px 20px;
     text-align: center;
-    font-family: Georgia, serif;
-    font-size: 1.8rem;
+    font-family: "dress-combo-three", sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #625853;
 }
 
 /* BACK TO TOP */
