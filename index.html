@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/kit7jyr.css">
 </head>
-<body>
+<body id="top">
     <header>
         <p class="collection-title">Movie Collection</p>
         <h1>movies</h1>
@@ -17,6 +17,7 @@
         <section class="filter-section">
             <p class="filter-label">Explore by genre</p>
             <ul class="filters">
+
                 <li data-genre="all" class="filter genreFilter selected">
                     All
                 </li>
@@ -62,9 +63,46 @@
                 </li>
 
             </ul>
+
+            <p class="filter-label year-label">Explore by decade</p>
+            <ul class="filters">
+
+                <li data-decade="all" class="filter decadeFilter selected">
+                    All
+                </li>
+
+                <li data-decade="1970" class="filter decadeFilter">
+                    1970s
+                </li>
+
+                <li data-decade="1980" class="filter decadeFilter">
+                    1980s
+                </li>
+
+                <li data-decade="1990" class="filter decadeFilter">
+                    1990s
+                </li>
+
+                <li data-decade="2000" class="filter decadeFilter">
+                    2000s
+                </li>
+
+                <li data-decade="2010" class="filter decadeFilter">
+                    2010s
+                </li>
+
+                <li data-decade="2020" class="filter decadeFilter">
+                    2020s
+                </li>
+
+            </ul>
+
+            <p id="movieCount">0 movies</p>
         </section>
         <section id="movies"></section>
     </main>
+
+    <button id="backToTop">↑</button>
 
     <footer>
         <p>Movie Collection</p>

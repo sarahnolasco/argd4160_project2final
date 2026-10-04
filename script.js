@@ -12,6 +12,7 @@ fetch("DataCollection(Sheet1).json")
             let movie = movies[i];
             makeMovie(movie);
         }
+        updateMovieCount(movies.length);
     })
 
     .catch(error => console.log("error", error));
@@ -179,24 +180,57 @@ function createGenreFilter(genre) {
             let moviesSection =
                 document.querySelector("#movies");
             moviesSection.innerHTML = "";
+            let filteredMovies = [];
             for (let i = 0; i < movies.length; i++) {
                 let movie = movies[i];
                 let genres =
-                    movie.Genre
-                        .toLowerCase()
-                        .split(",")
-                        .map(genre => genre.trim());
+                movie.Genre
+                .toLowerCase()
+                .split(",")
+                .map(genre => genre.trim());
+             if (
+                genres.includes(genre) ||
+                genre === "all"
+            ) {
+                filteredMovies.push(movie);
+                makeMovie(movie);
+            }
+        }
+            let filters =
+                document.querySelectorAll(".genreFilter");
+            styleFilters(filters, genre);
+            updateMovieCount(filteredMovies.length);
+        });
+}
+
+// year filtering
+function createDecadeFilter(decade) {
+    document
+        .querySelector(`[data-decade="${decade}"]`)
+        .addEventListener("click", function() {
+            let moviesSection =
+                document.querySelector("#movies");
+            moviesSection.innerHTML = "";
+            let filteredMovies = [];
+            for (let i = 0; i < movies.length; i++) {
+                let movie = movies[i];
+                let year =
+                    movie["Release Year"];
                 if (
-                    genres.includes(genre) ||
-                    genre === "all"
+                    decade === "all" ||
+                    (year >= Number(decade) &&
+                    year < Number(decade) + 10)
                 ) {
+                    filteredMovies.push(movie);
                     makeMovie(movie);
                 }
             }
             let filters =
-                document.querySelectorAll(".genreFilter");
-            styleFilters(filters, genre);
+                document.querySelectorAll(".decadeFilter");
+            styleDecadeFilters(filters, decade);
+            updateMovieCount(filteredMovies.length);
         });
+
 }
 
 // selected filter styling
@@ -211,6 +245,34 @@ function styleFilters(filters, selected) {
         else {
             filter.classList.remove("selected");
         }
+    }
+}
+
+// selected decade filter styling
+function styleDecadeFilters(filters, selected) {
+    for (let i = 0; i < filters.length; i++) {
+        let filter = filters[i];
+        if (
+            filter.getAttribute("data-decade") === selected
+        ) {
+            filter.classList.add("selected");
+        }
+        else {
+            filter.classList.remove("selected");
+        }
+    }
+}
+
+// update movie count
+function updateMovieCount(count) {
+    let movieCount =
+        document.querySelector("#movieCount");
+
+    if (count === 1) {
+        movieCount.textContent = "1 movie";
+    }
+    else {
+        movieCount.textContent = count + " movies";
     }
 }
 
@@ -232,3 +294,36 @@ let genres = [
 for (let i = 0; i < genres.length; i++) {
     createGenreFilter(genres[i]);
 }
+
+// decade list
+let decades = [
+    "all",
+    "1970",
+    "1980",
+    "1990",
+    "2000",
+    "2010",
+    "2020"
+];
+
+for (let i = 0; i < decades.length; i++) {
+    createDecadeFilter(decades[i]);
+}
+
+// back to top button
+let backToTop =
+    document.querySelector("#backToTop");
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 400) {
+        backToTop.classList.add("show");
+    }
+    else {
+        backToTop.classList.remove("show");
+    }
+});
+backToTop.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});

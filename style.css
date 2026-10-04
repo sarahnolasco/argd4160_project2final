@@ -61,6 +61,10 @@ main {
     color: #766b67;
 }
 
+.year-label {
+    margin-top: 30px;
+}
+
 .filters {
     display: flex;
     flex-wrap: wrap;
@@ -90,6 +94,15 @@ main {
 .filter.selected {
     background-color: #d6a4ba;
     border-color: #d6a4ba;
+}
+
+/* MOVIE COUNT */
+
+#movieCount {
+    margin: 25px 0 0;
+    color: #766b67;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
 }
 
 /* MOVIES */
@@ -170,6 +183,40 @@ main {
     font-size: 1.8rem;
 }
 
+/* BACK TO TOP */
+
+#backToTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background-color: #292426;
+    color: #f6eee7;
+    font-size: 1.3rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+}
+
+#backToTop.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    background-color: #d6a4ba;
+    color: #292426;
+}
+
 /* FOOTER */
 
 footer {
@@ -230,6 +277,16 @@ footer {
         padding: 8px 12px;
 
         font-size: 0.75rem;
+    }
+
+    #backToTop {
+    right: 15px;
+
+    bottom: 15px;
+
+    width: 40px;
+
+    height: 40px;
     }
 
 }
