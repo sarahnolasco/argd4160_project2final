@@ -24,7 +24,7 @@ header {
 
 .collection-title {
     margin: 0 0 15px;
-    font-size: 0.75rem;
+    font-size: 0.95rem;
     font-weight: bold;
     letter-spacing: 0.2em;
 }
@@ -169,7 +169,7 @@ main {
     padding: 5px 8px;
     border-radius: 4px;
     background-color: #e8ddd6;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: #625853;
 }
 
@@ -226,7 +226,7 @@ footer {
     border-top: 1px solid #d3c8c1;
     text-align: center;
     color: #766b67;
-    font-size: 0.75rem;
+    font-size: 0.95rem;
 }
 
 /* TABLET */
@@ -272,7 +272,7 @@ footer {
     .genres span {
         padding: 4px 6px;
 
-        font-size: 0.55rem;
+        font-size: 0.65rem;
     }
 
     .filter {
